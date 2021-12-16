@@ -1,4 +1,4 @@
 function pow(x, n) {
-  // your code here
+  return(x**n);
 }
 module.exports = pow;

@@ -1,4 +1,5 @@
 function joinArrayRemoveDuplicate(arrayA, arrayB) {
-  // your code here
+  let conarr = arrayA.concat(arrayB);
+  return(Array.from(new Set(conarr)));
 }
 module.exports = joinArrayRemoveDuplicate;
