@@ -1,12 +1,14 @@
 function munculSekali(angka) {
-  const int = Array.from(angka);
-  let uniques = [];
-  const intedit = int;
+  let angkaUnik = new Set();
 
-  for (i = 0; i < int.length; i++) {
-    let int_copy = intedit.splice(intedit.indexOf(intedit[i]));
+  for (digit of angka.split("")) {
+    if (angkaUnik.has(parseInt(digit))) {
+      angkaUnik.delete(parseInt(digit));
+    } else {
+      angkaUnik.add(parseInt(digit));
+    }
   }
-  return intedit;
+  return Array.from(angkaUnik);
 }
-console.log(munculSekali("76523752"));
+
 module.exports = munculSekali;
